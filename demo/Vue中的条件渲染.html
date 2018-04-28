@@ -1,0 +1,53 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue中的条件渲染</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .activated{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div v-if="show" date-test="v-if">{{massage}}</div>
+    <div v-else>{{massage2}}</div>
+    <div v-show="show" data-test="v-show">{{massage}}</div>
+  </div>
+
+  <div id="app2">
+      <div v-if="show">
+        用户名：<input key="username"/>
+      </div>
+
+      <div v-else>
+        邮箱名：<input key="email">
+      </div>
+    </div>
+
+  <script>
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        show: false,
+        massage: "Hello World",
+        massage2: "Bye World"
+      },
+      methods: {}
+    })
+
+    var vm2 = new Vue({
+      el: "#app2",
+      data: {
+        show: false,
+      },
+      methods: {}
+    })
+  </script>
+</body>
+</html> 

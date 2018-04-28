@@ -1,0 +1,70 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue中的样式绑定</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .activated{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div @click="handleDivClick" :class="{activated: isActivated}">Hello World</div>
+  </div>
+
+  <div id="app2">
+    <div @click="handleDivClick" :class="[activated, activatedOne]">Hello Vue</div>
+  </div>
+
+  <div id="app3">
+      <div @click="handleDivClick" :style="[styleObj, {fontSize: '20px'}]">Hello style</div>
+    </div>
+
+  <script>
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        isActivated: false
+      },
+      methods: {
+        handleDivClick: function(){
+          this.isActivated = !this.isActivated
+        }
+      }
+    })
+
+    var vm2 = new Vue({
+      el: "#app2",
+      data: {
+        activated: "",
+        activatedOne: "activated-one"
+      },
+      methods: {
+        handleDivClick: function(){
+          this.activated = this.activated === "activated" ? "" : "activated"          
+        }
+      }
+    })
+
+    var vm3 = new Vue({
+      el: "#app3",
+      data: {
+        styleObj:{
+          color: "black"
+        }
+      },
+      methods: {
+        handleDivClick: function(){
+          this.styleObj.color = this.styleObj.color === "black" ? "red" : "black"          
+        }
+      }
+    })
+  </script>
+</body>
+</html> 
