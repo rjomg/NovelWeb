@@ -1,0 +1,53 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue中的插槽 (slot)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id='app'>
+    <child>
+        <h1>Dell</h1>
+    </child>
+
+    <content>
+        <boby-content>
+          <div class='header' slot='header'>header</div>
+          <div class='footer' slot='footer'>footer</div>
+        </boby-content>
+    </content>
+
+  </div>
+
+  <script>
+    Vue.prototype.bus = new Vue()
+
+    Vue.component('child', {
+      props:{
+        content: String
+      },
+      template: 
+        '<div>' +
+          '<p>Hello</p>' +
+          '<slot>默认值</slot>' +
+        '</div>'
+    })
+
+    Vue.component('boby-content', {
+      template: 
+        '<div>' +
+          '<slot name="header"></slot>' +
+          '<div class="boby-content">content</div>' +
+          '<slot name="footer"></slot>' +
+        '</div>'
+    })
+
+    var vm = new Vue({
+      el: '#app',
+    })
+  </script>
+</body>
+</html> 

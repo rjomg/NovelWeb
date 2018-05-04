@@ -1,0 +1,36 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>组件参数校验与非Props特性</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <child :content="'Hello World'"></child>
+  </div>
+
+  <script>
+    Vue.component('child', {
+      props: {
+        content: {
+          type: String, // 类型校验
+          required: false, // 为空
+          default: "default value", // 默认值
+          // 自定义校验器
+          validator: function(value){
+            return (value.length > 5)
+          }
+        }
+      },
+      template: "<div>{{content}}</div>"
+    })
+
+    var vm = new Vue({
+      el: "#app",
+    })
+  </script>
+</body>
+</html> 
