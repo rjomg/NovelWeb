@@ -3,38 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>5-3Vue中同时使用过度和动画</title>
+  <title>5-5Vue中的多个元素或组件的过渡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./velocity.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./animate.css">
   <style>
-    .fade-enter, .fade-leave-to {
+    .v-enter, v-leave-to{
       opacity: 0;
     }
-    .fade-enter-active, .fade-leave-active {
-      transition: opacity 3s;
+    .v-enter-active, v-leave-active{
+      transition: opacity 1s;
     }
-  </style>
   </style>
 </head>
 <body>
   <div id='app'>
-    <!-- duration 设置时间  enter-active-class设置进入样式 leave-active-class设置离开样式 appear appear-active-class设置刷新调用的样式-->
-    <transition :duration="{enter:5000, leave:10000}" name="fade"  enter-active-class="animated swing fade-enter-active" leave-active-class="animated shake fade-leave-active" appear appear-active-class="animated flash" >
-      <div v-show="show"><div>Hello World</div></div>
+    <transition mode="out-in">
+      <component :is="type"></component>
     </transition>
     <button @click="handleClick">toggle</button>
   </div>
 
   <script>
+
+    Vue.component('child', {
+      template: '<div>child</div>'
+    })
+
+    Vue.component('child-one', {
+      template: '<div>child-one</div>'
+    })
+
     var vm = new Vue({
       el: '#app',
       data: {
-        show: true
+        type: 'child'
       },
       methods: {
         handleClick: function(){
-          this.show = !this.show
+          this.type = this.type === 'child' ? 'child-one' : 'child'
         }
       }
     })
