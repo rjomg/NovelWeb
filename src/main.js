@@ -3,9 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './assets/styles/master.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper' // 引入轮播插件
+import 'swiper/dist/css/swiper.css' // 轮播图插件样式
+import './assets/styles/master.css' // 默认样式
+import './assets/styles/iconfont.css' // 图标
 
 Vue.config.productionTip = false
+Vue.use(VueAwesomeSwiper) // , /* { default global options } */
 
 /* eslint-disable no-new */
 new Vue({
