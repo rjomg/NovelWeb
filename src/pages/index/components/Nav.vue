@@ -1,16 +1,18 @@
 <template>
-  <div class="nav">
-    <ul>
-      <li><a href="#" target="_blank">首页</a></li>
-      <li><a href="#" target="_blank">书库</a></li>
-      <li><a href="#" target="_blank">排行</a></li>
-      <li><a href="#" target="_blank">精品</a></li>
-      <li><a href="#" target="_blank">论坛</a></li>
-      <li><a href="#" target="_blank">作家专区</a></li>
-      <li><a href="#" target="_blank">福利</a></li>
-      <li><a href="#" target="_blank">IP专区</a></li>
-      <li><a href="#" target="_blank">蓝海阅读</a></li>
-    </ul>
+  <div class="nav-bac">
+    <div class="nav">
+      <ul>
+        <li><a href="#" target="_blank">首页</a></li>
+        <li><a href="#" target="_blank">书库</a></li>
+        <li><a href="#" target="_blank">排行</a></li>
+        <li><a href="#" target="_blank">精品</a></li>
+        <li><a href="#" target="_blank">论坛</a></li>
+        <li><a href="#" target="_blank">作家专区</a></li>
+        <li><a href="#" target="_blank">福利</a></li>
+        <li><a href="#" target="_blank">IP专区</a></li>
+        <li><a href="#" target="_blank">蓝海阅读</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -21,6 +23,8 @@ export default{
 </script>
 
 <style lang="stylus" scoped>
+  .
+    background-color: ;
   .nav
     margin: auto;
     width: 1200px;
