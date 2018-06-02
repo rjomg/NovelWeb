@@ -1,0 +1,41 @@
+{
+	"ret": true,
+	"data": {
+        "recommendTitle": "每周推荐",
+		"recommendList": [{
+			"id": "1",
+			"tags": "「悬疑」",
+            "title": "诡案追凶录",
+            "url": "http://www.baidu.com"
+		}, {
+			"id": "2",
+			"tags": "「都市」",
+            "title": "都市全能大相师",
+            "url": "http://www.baidu.com"
+		}, {
+			"id": "3",
+			"tags": "「悬疑」",
+			"title": "赎罪者",
+            "url": "http://www.baidu.com"
+        }],
+        "newsTitle": "最新动态",
+		"newsList": [{
+				"id": "1",
+				"tags": "「悬疑1」",
+				"title": "诡案追凶录1",
+                "url": "http://www.baidu.com"
+			}, {
+				"id": "2",
+				"tags": "「都市1」",
+				"title": "都市全能大相师1",
+                "url": "http://www.baidu.com"
+			}, {
+				"id": "3",
+				"tags": "「悬疑」",
+				"title": "赎罪者",
+                "url": "http://www.baidu.com"
+			}
+		]
+	},
+	"massage": ""
+}
