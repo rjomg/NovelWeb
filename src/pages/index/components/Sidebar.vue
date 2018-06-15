@@ -1,8 +1,8 @@
 <template>
   <div class="sidebar">
-    <span class="title">{{title}}</span>
+    <span class="title">{{info.title}}</span>
     <ul>
-      <li v-for="item of list" :key="item.id">
+      <li v-for="item of info.list" :key="item.id">
         <a :href="item.url" target="_blank" v-bind:title="item.title"><span class="tags">{{item.tags}}</span>{{item.title}}</a>
       </li>
     </ul>
@@ -13,12 +13,8 @@
 export default{
   name: 'IndexSidebar',
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    list: {
-      type: Array,
+    info: {
+      type: [Array, Object],
       required: true
     }
   }

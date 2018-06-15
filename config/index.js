@@ -12,10 +12,17 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // 访问本地静态文件
-      '/api': {
-        target: "http://localhost:8080",
+      // '/api': {
+      //   target: "http://localhost:8080",
+      //   pathRewrite: {
+      //     '^/api': "/static/mock"
+      //   }
+      // }
+      '/api': {  //使用"/api"来代替"http://f.apiplus.c"
+        target: 'http://www.noveladmin.com', //源地址
+        changeOrigin: true, //改变源
         pathRewrite: {
-          '^/api': "/static/mock"
+          '^/api': 'http://www.noveladmin.com/api' //路径重写
         }
       }
     },

@@ -30,15 +30,15 @@ export default{
       },
       swiperList: [{
         id: '1',
-        imgUrl: 'http://pic.motieimg.com/img/15271302248586114_950_360.jpg'
+        imgUrl: 'http://pic.motieimg.com/img/152842321649181755_950_360.jpg'
       },
       {
         id: '2',
-        imgUrl: 'http://pic.motieimg.com/img/152713028552916_950_360.jpg'
+        imgUrl: 'http://motie-web-static-resource.oss-cn-qingdao.aliyuncs.com/temp/379bf2e5-2c41-4f8f-af98-90e1655ed249.jpg'
       },
       {
         id: '3',
-        imgUrl: 'http://pic.motieimg.com/img/152713021647223889_950_360.jpg'
+        imgUrl: 'http://pic.motieimg.com/img/152903401458474845_950_360.jpg'
       }]
     }
   }

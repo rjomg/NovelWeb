@@ -2,7 +2,7 @@
   <div class="nav-bac">
     <div class="nav">
       <ul>
-        <li><a href="#" target="_blank">首页</a></li>
+        <li class="curr"><a href="#" target="_blank" >首页</a></li>
         <li><a href="#" target="_blank">书库</a></li>
         <li><a href="#" target="_blank">排行</a></li>
         <li><a href="#" target="_blank">精品</a></li>
@@ -23,8 +23,10 @@ export default{
 </script>
 
 <style lang="stylus" scoped>
-  .
-    background-color: ;
+  .nav-bac
+    background-color: #fafafa;
+  .curr
+    background-color: #4c4c4c;
   .nav
     margin: auto;
     width: 1200px;
